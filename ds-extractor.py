@@ -152,7 +152,7 @@ def cycle():
         return
 
     def redis_insert(post):
-        print 'Adding: %s..' % post.get('title')
+        print u'Adding: %s..' % post.get('title')
         
         name = 'ds-articles-ok'
 
