@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>DailySocial For ME!</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/css/style.css" />
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Vollkorn' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+	<script src="/static/js/respond.min.js"></script>
+	<link rel="stylesheet" href="/static/css/ie.css" />
+<![endif]-->
+
+<style>
+	body {
+		background: #fcfcfc;
+		font-family: 'Droid Sans', sans-serif;
+		color: #444;
+	}
+	header h1 {
+		display: block;
+		margin: 10px 0 5px 0;
+		font-size: 1.8em;
+		font-weight: bold;
+		color: #000;
+	}
+	header.row {
+		margin-bottom: 20px;
+	}
+	a {
+		color: #000;
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+	h2 {
+		display: inline-block;
+		font-size: 1.6em;
+	}
+
+	ul > li.row {
+		margin-bottom: 30px;
+	}
+	ul > li.row p {
+		margin-bottom: 10px;
+		font-family: 'Vollkorn', sans-serif;
+	}
+
+	footer.row {
+		text-align: center;
+		font-size: 0.8em;
+		margin-bottom: 30px;
+	}
+</style>
+
+</head>
+<body>
+	<div class="container">
+		<header class="row">
+			<div class="col four-four">
+				<h1>DailySocial For ME!</h1>
+				<p>By <a href="http://bango29.com" target="_blank">Batista Harahap</a></p>
+			</div>
+		</header>
+		
+		<ul>
+		    {% if keys %}
+		    {% for key in keys %}
+		    <li class="row">
+		    	<article class="col four-four">
+			        <h2><a href="{{ key.link }}" target="_blank">{{ key.title|safe }}</a></h2>
+			        <p>{{ key.summary|safe }}</p>
+		    	</article>
+		    </li>
+		    {% endfor %}
+		    {% endif %}
+		</ul>
+
+		<footer class="row">
+			<div class="col four-four">
+				<p>
+					&raquo; Made with love from <a href="http://bango29.com" target="_blank">bango29.com</a> &laquo;
+				</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
