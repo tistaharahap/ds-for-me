@@ -3,3 +3,4 @@ requests
 redis
 hiredis
 feedparser
+flask
