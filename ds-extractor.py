@@ -10,7 +10,7 @@ import json
 
 TIMEOUT = 60*60
 
-REDIS_HOST = '127.0.0.1'
+REDIS_HOST = '10.130.254.85'
 REDIS_PORT = 6379
 
 
