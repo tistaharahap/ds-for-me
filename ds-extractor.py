@@ -152,8 +152,6 @@ def cycle():
         return
 
     def redis_insert(post):
-        print u'Adding: %s..' % post.get('title').encode('utf-8')
-        
         name = 'ds-articles-ok'
 
         redis_conn.zadd(name, post.get('published'), json.dumps(post))
