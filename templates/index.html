@@ -70,7 +70,7 @@
 		
 		<ul>
 		    {% if keys %}
-		    {% for key in keys %}
+		    {% for key in keys|reverse %}
 		    <li class="row">
 		    	<article class="col four-four">
 			        <h2><a href="{{ key.link }}" target="_blank">{{ key.title|safe }}</a></h2>
