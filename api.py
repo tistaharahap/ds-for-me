@@ -5,7 +5,7 @@ import time
 import json
 
 
-REDIS_HOST = '127.0.0.1'
+REDIS_HOST = '10.130.254.85'
 REDIS_PORT = 6379
 
 app = Flask(__name__)
